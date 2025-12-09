@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$x = 10;  
+
+//PRE-INCREMENT
+echo ++$x;
+
+//POST-INCREMENT
+echo $x++;
+
+//PRE-DECREMENT
+echo --$x;
+
+//POST-DECREMENT
+echo $x--;
+
+?>  
+
+</body>
+</html>

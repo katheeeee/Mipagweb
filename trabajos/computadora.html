@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computadora</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #fff;
+    }
+    .computadora {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+    }
+    .monitor {
+      width: 400px;
+      height: 280px;
+      border: 20px solid #000;
+      border-radius: 10px;
+      display: flex;
+      background: #6db4e3;
+      position: relative;
+      box-shadow: 5px 5px 5px rgb(125, 106, 106);
+    }
+    .monitor::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 30px;
+      background: #000;
+      border-radius: 50%;
+    }
+    .base {
+      width: 120px;
+      height: 20px;
+      background: #000;
+      position: absolute;
+      bottom: -54px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 4px;
+    }
+    .cpu {
+      width: 180px;
+      height: 420px;
+      background: #000;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      gap: 30px;
+      box-shadow: 5px 5px 5px rgb(124, 107, 107);
+    }
+    .linea{
+      height: 30px;
+      background: #554c4c;
+      border-radius: 6px;
+    }
+    .boton {
+      width: 24px;
+      height: 24px;
+      background: #a0bbe4;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .teclado {
+      width: 480px;
+      background: #111;
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 8px;
+      bottom: -70px;
+      transform: translateX(10%);
+      position: absolute;
+      box-shadow: 5px 5px 5px rgb(124, 107, 107);
+    }
+    .fila {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    .tecla {
+      width: 40px;
+      height: 30px;
+      background: #444;
+      border-radius: 4px;
+      margin: 3px;
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="computadora">
+    <div class="monitor">
+      <div class="base"></div>
+    </div>
+    <div class="cpu">
+      <div class="linea"></div>
+      <div class="linea"></div>
+      <div class="linea"></div>
+      <div class="boton"></div>
+    </div>
+    <div class="teclado">
+      <div class="fila">
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      </div>
+      <div class="fila">
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      <div class="tecla"></div>
+      </div>
+      <div class="fila">
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+        <div class="tecla"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

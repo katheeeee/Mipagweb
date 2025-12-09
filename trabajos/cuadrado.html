@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja{
+            border: 4px solid red;
+            width: 100px;
+            background-color: yellow;
+            height: 100px;
+            position: absolute;
+            top:200px;
+            left:200px;
+        }
+    </style>
+    <script>
+        let x = 200, y = 200;
+
+        function mover(){
+            const caja = document.querySelector(".caja");
+            x += 10;
+            caja.style.left = x + "px";
+        }
+
+        function mover2(){
+            const caja = document.querySelector(".caja");
+            x -= 10;
+            caja.style.left = x + "px";
+        }
+
+        function mover3(){
+            const caja = document.querySelector(".caja");
+            y -= 10
+            caja.style.top = y + "px";
+        }
+
+        function mover4(){
+            const caja = document.querySelector(".caja");
+            y += 10;
+            caja.style.top = y + "px";
+        }
+    </script>
+</head>
+<body>
+    <div class="caja"></div>
+    <button onclick="mover()">Derecha</button>
+    <button onclick="mover2()">Izquierda</button>
+    <button onclick="mover3()">Arriba</button>
+    <button onclick="mover4()">Abajo</button>
+</body>
+</html>

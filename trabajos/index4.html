@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+
+    <form action="procesar.php" method="POST">
+        <input type="text" name="nombres" placeholder="nombres">
+        <input type="text" name="apellidos" placeholder="apellidos">
+        <input type="submit" value="Guardar">
+    </form>
+
+    <div id="respuesta"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('input[type=submit]').click(function () {
+                $.post('procesar.php', $("form").serialize(), function (data) {
+                    alert(data);
+                    consultar();
+                });
+                return false;
+            });
+
+            function consultar() {
+                $.ajax({
+                    url: 'consultar.php',
+                    dataType: "json",
+                    beforeSend: function () {
+                        $('#respuesta').text('Cargando informacion...')
+                    },
+                    success: function (data) {
+                        var cont = '';
+                        for (var item in data) {
+                            cont += 
+                                data[item][0] + " - " +
+                                data[item][1] + " - " +
+                                data[item][2] + "<br>";
+                        }
+                        $('#respuesta').html(cont);
+                    }
+                });
+            }
+
+            consultar();
+        });
+    </script>
+
+</body>
+</html>
