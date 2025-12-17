@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . 'unidad2.practicas/vendor/autoload.php';
+require __DIR__ . '/unidad2.practicas/vendor/autoload.php';
 require 'Conexion.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
